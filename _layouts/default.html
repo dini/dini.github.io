@@ -1,64 +1,31 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-{%- include head.html -%}
+{% seo %}
+  </head>
 
-<body>
-  {%- include header.html -%}
-  <div id="index-box">
-    <div class="search-pages">
-      <input type="text" id="search-input" placeholder="search..." onkeyup="showSearchResults()" />
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+
+        <section id="downloads">
+          <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
     </div>
-    <ul id="results-container">
-   </ul>
-    <ul id="index">
-      {% assign sortedlist = site.html_pages | sort_natural: 'url' %}
-      {% for page in sortedlist %}
-      {% if page.url == "/" %}
-        <li><a href="{{ page.url }}">Home</a></li>
-      {% elsif page.url contains "pages/" %}
-        <li><a href="{{ page.url }}">{{ page.url | replace: '/', ' ' | split:' ' | last | replace: '-', ' '  | remove: '.html' }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      <h1>{{ page.url | replace: '/', ' ' | split:' ' | last | replace: '-', ' '  | remove: '.html' }}</h1>
-      <br>
-      {{ content }}
-    </div>
-  </main>
-
-  {%- include footer.html -%}
-
-
-  <script>
-    window.simpleJekyllSearch = new SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '{{ site.baseurl }}/search.json',
-      searchResultTemplate: '<li><a href={url}>{title}</a></li>',
-      noResultsText: 'No results found.',
-      fuzzy: false,
-      limit: 100,
-      exclude: ['Welcome']
-    })
-  </script>
-
-
-  <script>
-    function showSearchResults() {
-      if(document.getElementById("search-input").value == "") {
-        document.getElementById("index").style.display  = "block";
-        document.getElementById("results-container").style.display  = "none";
-      } else {
-        document.getElementById("index").style.display = "none";
-        document.getElementById("results-container").style.display = "block";
-      }
-    }
-  </script>
-</body>
-
+  </body>
 </html>
