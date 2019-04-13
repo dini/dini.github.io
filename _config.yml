@@ -1,5 +1,10 @@
 title: Notes
-description: For everlasting memory.
+email: dinisoft@gmail.com
+description: >-
+  For everlasting memory.
+baseurl: ""
+url: ""
 show_downloads: false
-google_analytics:
 theme: jekyll-theme-hacker
+timezone: Asia/Omsk
+encoding: utf-8
