@@ -1,3 +1,13 @@
 title: Notes
 description: For everlasting memory.
 lang: ru_RU
+
+version: 3.5.0
+
+sass:
+  style: :expanded # Replace to :compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

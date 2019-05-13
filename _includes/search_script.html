@@ -1,0 +1,23 @@
+<!-- Search script -->
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+<script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+    function showSearchResults() {
+        if(document.getElementById("search-input").value == "") {
+            document.getElementById("index").style.display  = "block";
+            document.getElementById("results-container").style.display  = "none";
+        } else {
+            document.getElementById("index").style.display = "none";
+            document.getElementById("results-container").style.display = "block";
+        }
+    }
+</script>

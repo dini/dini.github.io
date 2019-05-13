@@ -1,9 +1,7 @@
-<header>
-<div class="container">
-<h1>{{ site.title | default: site.github.repository_name }}</h1>
-<h2>{{ site.description | default: site.github.project_tagline }}</h2>
-<section id="downloads">
-<a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-</section>
-</div>
+<header class="site-header" role="banner">
+    <div class="wrapper">
+        {%- assign default_paths = site.pages | map: "path" -%}
+        {%- assign page_paths = site.header_pages | default: default_paths -%}
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </div>
 </header>
