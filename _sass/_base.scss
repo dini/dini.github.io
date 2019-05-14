@@ -1,11 +1,16 @@
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
+}
+
+header {
+    padding: 1rem;
+}
+
+.container {
+    padding: 1rem;
 }
 
 footer {
-    height: 50px;
-    margin-top: -50px;
+    padding: 1rem;
 }
