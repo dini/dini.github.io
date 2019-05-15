@@ -19,6 +19,8 @@ body {
 
 header {
     height: 30px;
+    background-color: #666;
+    color: white;
 }
 
 section:after {
@@ -38,6 +40,7 @@ nav a {
     margin-top: 7px;
     display: block;
     width: 100%;
+    background: #ccc;
 }
 
 article {
@@ -52,6 +55,7 @@ aside {
     padding: 15px;
     margin-top: 7px;
     text-align: center;
+    background: #ccc;
 }
 
 footer {
@@ -61,6 +65,8 @@ footer {
     left: 0;
     padding: 1rem;
     text-align: center;
+    background-color: #666;
+    color: white;
 }
 
 @media only screen and (max-width: 620px) {
