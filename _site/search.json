@@ -1,0 +1,37 @@
+[
+    {
+        "url"     : "/",
+        "title"   : "",
+        "content" : "Testing page"
+    },
+    {
+        "url"     : "/404.html",
+        "title"   : "404",
+        "content" : "Page not found"
+    },
+    {
+        "url"     : "/articles.html",
+        "title"   : "articles",
+        "content" : "                                                                                          ClamAV                         SSH                                                                                                EFI Stub Kernel                                                                                    "
+    },
+    {
+        "url"     : "/blog.html",
+        "title"   : "blog",
+        "content" : ""
+    },
+    {
+        "url"     : "/pages/clamav.html",
+        "title"   : "clamav",
+        "content" : "    ClamAV  false-positive  ClamAV :    (    ,    clamav),  Sanesecurity.Jurlbl.81bb94.UNOFFICIAL;             .ign2;           SOURCE.type.NUMBER(..   OFFICIAL/UNOFFICIAL/etc),    Sanesecurity.Jurlbl.81bb94;    clamav.  ?$ grep DatabaseDirectory /etc/clamav/clamd.conf"
+    },
+    {
+        "url"     : "/pages/gnupg.html",
+        "title"   : "gnupg",
+        "content" : " SSH  :export GPG_TTY=$(tty)export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)  ~/.gnupg/gpg-agent.conf  :enable-ssh-support     :$ ssh-add id_rsaCould not add identity &quot;id_rsa&quot;: agent refused operation :$ echo UPDATESTARTUPTTY | gpg-connect-agent"
+    },
+    {
+        "url"     : "/pages/uefi.html",
+        "title"   : "uefi",
+        "content" : "## EFI Stub Kernel         `CONFIG_EFI_STUB`    . ESP    `/esp`,  `/esp/EFI/Linux`   `/boot`.```# mkdir -p /esp# mount /dev/sda1 /esp# mkdir -p /esp/EFI/Linux# mv /boot/* /esp/EFI/Linux# mount -o bind /esp/EFI/Linux /boot# mount /sys/firmware/efi/efivars -o rw,remount# efibootmgr --create --part 1 --disk /dev/sda --label &quot;Linux&quot; --loader &#39;&amp;#92;EFI&amp;#92;Linux&amp;#92;vmlinuz-linux&#39; -u &#39;initrd=&amp;#92;EFI&amp;#92;Linux&amp;#92;initramfs.img&#39;# mount /sys/firmware/efi/efivars -o ro,remount```"
+    }
+]

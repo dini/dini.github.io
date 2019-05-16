@@ -1,0 +1,77 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: 'Arial', 'Helvetica', 'sans-serif';
+}
+
+header {
+  height: 30px;
+  background-color: #666;
+  color: white;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+nav a {
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  background: #ccc;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+}
+
+aside {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+  background: #ccc;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #666;
+  color: white;
+}
+
+@media only screen and (max-width: 620px) {
+  nav, article, aside {
+    width: 100%;
+    height: auto;
+  }
+}

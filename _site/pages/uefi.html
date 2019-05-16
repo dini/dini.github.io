@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru"><head><!-- Meta -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css?v=">
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+<link rel="shortcut icon" href="/public/favicon.ico">
+<!-- Hooks -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Notes" />
+<!-- Begin Jekyll SEO tag v2.6.0 -->
+<title>EFI Stub Kernel | Notes</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="EFI Stub Kernel" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="For everlasting memory." />
+<meta property="og:description" content="For everlasting memory." />
+<meta property="og:site_name" content="Notes" />
+<script type="application/ld+json">
+{"description":"For everlasting memory.","@type":"WebPage","headline":"EFI Stub Kernel","url":"/pages/uefi.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body><!-- Header -->
+<header>
+    <div><a rel="author" href="/">Notes</a>
+    </div>
+</header>
+<!-- Section -->
+<section><!-- Menu -->
+<nav>
+    <a href="/blog">Мысли вслух</a>
+    <a href="/articles">Заметки на полях</a>
+</nav>
+<!-- Content -->
+<article>
+<h2 id="efi-stub-kernel">EFI Stub Kernel</h2>
+<p>В подавляющем большинстве дистрибутивов ядро уже собранно с параметром <code class="highlighter-rouge">CONFIG_EFI_STUB</code> и этим можно воспользоваться.
+Монтируем ESP раздел в директорию <code class="highlighter-rouge">/esp</code>, затем <code class="highlighter-rouge">/esp/EFI/Linux</code> биндим в <code class="highlighter-rouge">/boot</code>.
+<!--more--></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mkdir -p /esp
+# mount /dev/sda1 /esp
+# mkdir -p /esp/EFI/Linux
+# mv /boot/* /esp/EFI/Linux
+# mount -o bind /esp/EFI/Linux /boot
+# mount /sys/firmware/efi/efivars -o rw,remount
+# efibootmgr --create --part 1 --disk /dev/sda --label "Linux" --loader '\EFI\Linux\vmlinuz-linux' -u 'initrd=\EFI\Linux\initramfs.img'
+# mount /sys/firmware/efi/efivars -o ro,remount
+</code></pre></div></div>
+
+</article>
+<!-- Anotation -->
+<aside>
+</aside>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2019. All rights reserved.</p>
+</footer>
+
+<!-- Search script -->
+<script src="/assets/js/simple-jekyll-search.js"></script>
+<script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+    function showSearchResults() {
+        if(document.getElementById("search-input").value == "") {
+            document.getElementById("index").style.display  = "block";
+            document.getElementById("results-container").style.display  = "none";
+        } else {
+            document.getElementById("index").style.display = "none";
+            document.getElementById("results-container").style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
