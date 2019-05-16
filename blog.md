@@ -1,6 +1,6 @@
 ---
 layout: default
-title: All posts
+title: Все записи
 ---
 <ul>
 {% for post in site.posts %}
