@@ -3,6 +3,8 @@ description: For everlasting memory.
 lang: ru_RU
 version: 3.5.0
 
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
 sass:
   style: :expanded # Replace to :compressed
 
