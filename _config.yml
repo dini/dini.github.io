@@ -1,6 +1,6 @@
 title: Notes
 description: For everlasting memory.
-lang: ru_RU
+lang: ru
 version: 3.5.0
 
 permalink: /:categories/:year/:month/:day/:title:output_ext
