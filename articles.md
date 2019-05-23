@@ -4,10 +4,10 @@ title: Все статьи
 search: exclude
 ---
 <ul>
-{% for page in site.pages %}
+{% for page in site.pages %}{% unless page.title %}
     <li>
         <a href="{{ page.url }}">{{ page.title }}</a>
         {{ page.excerpt }}
     </li>
-{% endfor %}
+{% endunless %}{% endfor %}
 </ul>
