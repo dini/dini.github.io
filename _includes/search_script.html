@@ -1,15 +1,14 @@
 <!-- Search script -->
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
+<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
 <script>
     window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.url }}{{ site.baseurl }}/search.json',
+        json: '{{ site.baseurl }}/search.json',
         searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
         noResultsText: 'No results found',
         limit: 10,
-        fuzzy: false,
-        exclude: ['Welcome']
+        fuzzy: false
     })
     function showSearchResults() {
         if(document.getElementById("search-input").value == "") {

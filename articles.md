@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Все статьи
+search: exclude
 ---
 <ul>
 {% for page in site.pages %}

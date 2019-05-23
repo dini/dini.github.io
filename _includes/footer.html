@@ -1,6 +1,8 @@
 <!-- Footer -->
 <footer class="footer">
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    {% if page.last_updated %}<p>Page last updated: {{ page.last_updated }}</p>{% endif %}
+    <p>Site last generated: {{ site.time | date: "%b %-d, %Y" }}</p>
 </footer>
 {%- include analytics.html -%}
 {%- include search_script.html -%}

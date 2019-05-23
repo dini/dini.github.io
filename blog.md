@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Все записи
+search: exclude
 ---
 <ul>
 {% for post in site.posts %}
