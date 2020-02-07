@@ -1,4 +1,4 @@
 (function() {
     // Theme switch
-    var theme
+    //var theme
 }());
