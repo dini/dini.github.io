@@ -12,3 +12,5 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+yandex_site_verification: "002e3f9ab0390929"
