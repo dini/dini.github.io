@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/dini
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dini.github.io
+  * I am dini (https://keybase.io/dini) on keybase.
+  * I have a public key with fingerprint 1BE2 9BA2 16D2 AF9D 46D9  2518 BD51 4364 1D5D 2D0F
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101472ca56006f47c035568a0d8da2c1073b3e7c6994e0122aa53fcf9aaf979fd480a",
+      "fingerprint": "1be29ba216d2af9d46d92518bd5143641d5d2d0f",
+      "host": "keybase.io",
+      "key_id": "bd5143641d5d2d0f",
+      "kid": "0101472ca56006f47c035568a0d8da2c1073b3e7c6994e0122aa53fcf9aaf979fd480a",
+      "uid": "64a85f8bb9a26e829563023f25175b19",
+      "username": "dini"
+    },
+    "service": {
+      "hostname": "dini.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1616553467,
+  "expire_in": 157680000,
+  "prev": "b36457e52ba56d5c7e5ce4c6f0b387c18f162e472b7da19b91d7263383670480",
+  "seqno": 3,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIpAnicrVJbSBRRGF7NW6IkSZSVoVMgidmcuZyZWQoE6SGNLlBRJm0zc87sTrs7
+u+7OqqtJFyoCtZIo6SGI8pJ08yEvEEpaZpEEouiLlliGIZVCN9OoM1bQQ4+dl3PO
+/3/fd77/4zxKXGSLjxDiq+6MCJ66iGddF0O2QwX1c+WU4kNhyl5OufHChj0IB02H
+W0eUnaIBDTiBUWUe0jTUOEGlWZ6HokwjEcmMCmiBVVgsqFCSOEwDhpFlntVUTZJl
+TRIkDXEiLVNZlKYbThzwB3TDJLJAwYykyAyAiCE4xEEkMTwQFcQDjoUcQDxiEK0R
+ossXtBjEnCIHcbbuIzVycSzY+wf+P/sOLchBThZ5TVQUSWYgFhmJhyzNsBrxLPAK
+kCxgEAcM2YsJGumGTlVkUaRSrKvYCtWa4q9utlM3XSHl1zT+gM/0qT4P6blM0x+0
+W1wz7LfAJVhx/JZxKLpBuE7CKMaBoO4zKDsgSNXULV0AAeR5loNCFoVL/XoAO3QL
+wQtQpMmy3sHFVmYkL17APKOQcBCvkqOKORVqtMKKggpEDUAGk/AUAclAUiSABAay
+rMhCgSapUNZgRYaPsrPEpuwkkkHdachmKICpiu4HhVG2iHhbTHSk9bts8YuT/vy5
+1OnYH3ke1tlyN8c9r55aemK8Jeb19YPnCttxx96i0rT2shszP17FvUiVnuekmY4L
+6smwK/Pw4Nhk1IpP1Sv3cxU2f1XGjuQ9Bzbs3NI/7gUNefn21urOhJG6uMSe+uiK
+M0mXjLZt/XEJ+eJsr6d5/ez208cGQm+73N2To/Mf66iJ3v7GqQ9FVztba3vSB2qb
+u+hp6s1QLrP8dtXAu/MzhbuPlKVwX1a1OHKm9l35mti2qWT06P2XT5oGU2pu9g2P
+zdW31zze1e1peB8zkR65LuNy46SR/LllOIvVt4ZzvUMbv6V8j6se7Jtc3fEw9dbZ
+5GuVTctGwktszd7NmWuOr71X+bQgtvgnh6RDNQ==
+=xt+S
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dini
+
+==================================================================
